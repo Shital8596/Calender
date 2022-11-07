@@ -42,13 +42,12 @@ switch($var){
 }
 
 $totalDays =(int) date("t", $date);
-$date2 = strtotime("$year-$month-$totalDays");
-$var2 = (int) date("w", $date2);
+
  
 $res = new stdClass();
 $res->firstDay = $fd;
 $res->daysInMonth = $totalDays;
-$res->lastDay = $var2;
+
 
 print_r(json_encode($res))
 
